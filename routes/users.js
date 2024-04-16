@@ -17,7 +17,11 @@ const userSchema = mongoose.Schema({
   email: {
     type: String,
     require: true,
-  }
+  },
+  posts: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Post"
+  }]
 })
 
 userSchema.plugin(plm)
