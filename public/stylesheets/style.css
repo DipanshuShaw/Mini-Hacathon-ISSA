@@ -28,7 +28,7 @@ ul {
 
 /* Navbar styles */
 nav {
-  background-color: #e4c227;
+  background-color: rgb(250 204 21);
   color: #ffffff;
   display: flex;
   justify-content: space-between;
