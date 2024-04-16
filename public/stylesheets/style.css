@@ -21,15 +21,18 @@ ul {
   font-weight: 700;
 }
 
+.logo a{
+  color: #fff;
+}
+
 /* Navbar styles */
 nav {
-  background-color: #6c0da4;
-  color: #fff;
+  background-color: #e4c227;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  height: 40px;
 }
 
 nav ul {
@@ -47,7 +50,6 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem;
-  font-size: 1rem;
 }
 
 nav ul li:hover {
@@ -121,6 +123,12 @@ nav ul li:hover {
     display: flex;
   }
 }
+.section-1{
+  background: url("https://www.murdoch.edu.au/sf-images/newsportallibrary/feature-images/note-taking-feature.jpg?sfvrsn=ff31cf5f_0");
+  background-size: cover;
+}
+
+
 
 
 footer {
