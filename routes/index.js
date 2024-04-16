@@ -9,10 +9,13 @@ passport.use(new localStrategy(userModel.authenticate()))
 /* GET home page. */
 
 
+router.get('/landing', function(req, res) {
+  res.render('landing');
+});
 
 
 router.get('/login', function(req, res) {
-  res.render('login');
+  res.render('login', {error: req.flash('error')});
 });
 
 
@@ -40,7 +43,8 @@ router.post("/register", function(req, res){
 
 router.post("/login", passport.authenticate("local",{
   successRedirect: '/homepage',
-  failureRedirect: "/login"
+  failureRedirect: "/login",
+  failureFlash: true,
 }), function(req,res){ })
 
 

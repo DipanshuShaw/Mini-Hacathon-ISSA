@@ -29,7 +29,11 @@
         <div class="login mt-28">
     
             <h1>Login</h1>
-    
+            <% if(error.length>0) { %>
+
+              <p class="error"><%= error %></p>
+
+            <% } %>
             <form action="/login" method="post"> 
 
                 <div class="input-box">
