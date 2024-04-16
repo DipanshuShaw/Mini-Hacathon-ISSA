@@ -20,10 +20,23 @@ router.get('/landing', isLoggedIn, async function(req, res) {
 });
 
 
+router.get('/landing/:postId', (req, res) => {
+  const postId = req.params.postId;
+  
+  res.json({ postId });
+});
+
 router.get('/login', function(req, res) {
   res.render('login', {error: req.flash('error')});
 });
 
+router.get('/aboutus', function(req, res) {
+  res.render('aboutus');
+});
+
+router.get('/contact', function(req, res) {
+  res.render('contact');
+});
 
 
 router.get('/add',isLoggedIn, async function(req, res) {

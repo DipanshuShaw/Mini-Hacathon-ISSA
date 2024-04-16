@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note It</title>
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,40 +11,56 @@
     <link rel="stylesheet" href="\stylesheets\output.css">
     <link rel="stylesheet" href="\stylesheets\style.css">
     <script src="https://kit.fontawesome.com/8ef3cb3355.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
+    
     <header class="leading-16">
         <nav>
-            <a href="#" class="text-xl">
+            <a href="#" class="text-xl font-semibold">
                 <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                Memo Props
-                
+                Memo Prop
             </a>
             <input type="checkbox" id="toggle" class="toggle-btn">
             <label for="toggle" class="toggle-btn">&#9776;</label>
             <ul class="text-lg">
               <li><a href="#">Home</a></li>
-              <li><a href="/aboutus">About Us</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li class="hover:border-0"><a href="/register" class="nav-btn register-link hover:bg-white hover:text-yellow-400 hover:border-white duration-200 transition-all ease-in-out">Register</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="hover:border-0"><a href="#" class="nav-btn register-link hover:bg-white hover:text-yellow-400 hover:border-white duration-200 transition-all ease-in-out">Register</a></li>
             </ul>
           </nav>
     </header>
-
-    <section class="section-1 h-screen bg-no-repeat bg-center flex items-center p-32">
-        <div class="hero-content">
-            <h1>Effortless note-taking and organization platform</h1>
-            <p>Streamline note-taking, organizing, and accessing with our user-friendly platform.</p>
-            <a href="/login"><button class="calling-btn text-lg">Get Started</button></a>
-          </div>
-          </div>
-    </section>
-
-    <section class="section-2">
-
-    </section>
     
+    <h1 align="center" class="contact-head">Contact Us</h1>
+    <section class="contact-sec-1">
+        <div class="contact-container" id="contact-container-1">
+            <h1><i class="fa fa-phone-square" aria-hidden="true"></i></h1>
+            Ring in the possibilities! Dial our number to bridge the gap between questions and answers. Your connection to us is just a call away.
+            <br><br> Telephone: 033-4855-1578-4468 <br> Phone: +91-88675-97658
+        </div>
+        <div class="contact-container" id="contact-container-2">
+            <h1><i class="fa fa-envelope" aria-hidden="true"></i></i></h1>
+            Drop us an email to open the door to inquiries, collaborations, and personalized solutions. Your message matters; let's start the conversation.
+            <br><br> E-mail: readingradical@gmail.com
+        </div>
+        <div class="contact-container" id="contact-container-3">
+            <h1><i class="fa fa-reply" aria-hidden="true"></i></h1>
+            Share your experience. Your feedback is the heartbeat of our growth. Leave a review and become a part of our journey towards excellence. <br><br>
+            <a href="#">Review the page</a>
+        </div>
+    </section>
+    <section class="contact-sec-2">
+        <div id="contact-container-4">
+            <h1>Leave A Review</h1>
+            <div class="h3">
+                <textarea name="" class="input" cols="30" rows="10" placeholder="Write A Comment"></textarea>
+            </div>
+            <div class="button">
+                <a href="#" class="input" id="button">Submit</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="website-name">Memo Prop</div>
         <div class="footer-content">
@@ -68,6 +84,5 @@
         <p>&copy; 2024 NiggerOnSale. All rights reserved.</p>
         <!-- <p>~Made By Dip</p> -->
     </footer>
-    <script src="/public/homepage.js"></script>
 </body>
 </html>
