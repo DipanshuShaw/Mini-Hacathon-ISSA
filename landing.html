@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memo Prop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Climate+Crisis&family=Fjalla+One&family=Fugaz+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Khula:wght@300;400;600;700;800&family=Lemon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Rhodium+Libre&family=Unna:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Climate+Crisis&family=Fjalla+One&family=Fugaz+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Khula:wght@300;400;600;700;800&family=Lemon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Rhodium+Libre&family=Unna:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Dots&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="public\stylesheets\output.css">
     <link rel="stylesheet" href="public\stylesheets\style.css">
     <script src="https://kit.fontawesome.com/8ef3cb3355.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="leading-16">
         <nav>
@@ -22,42 +26,41 @@
             <input type="checkbox" id="toggle" class="toggle-btn">
             <label for="toggle" class="toggle-btn">&#9776;</label>
             <ul class="text-lg">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
-              <li class="hover:border-0"><a href="#" class="nav-btn register-link hover:bg-white hover:text-yellow-400 hover:border-white duration-200 transition-all ease-in-out">Log Out</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="hover:border-0"><a href="#"
+                        class="nav-btn register-link hover:bg-white hover:text-yellow-400 hover:border-white duration-200 transition-all ease-in-out">Log
+                        Out</a></li>
             </ul>
-          </nav>
+        </nav>
     </header>
-    <section class="land-sec1 py-6 px-4">
+    <section class="land-sec1 py-6 px-4 bg-yellow-400">
         <h1 class="lg:text-3xl text-2xl underline-offset-4 px-4 mb-4 font-semibold inline-block w-2/3 lg:w-4/5">
-            Hello, <%=user.fullname%> 
-          </h1>
-    <div class="md:w-1/6 text-center block sm:inline-block">
-        <a href="#" class=" border-2 border-cyan-600 p-3 px-5 text-md lg:text-lg rounded-full bg-cyan-500 text-white hover:bg-cyan-600 transition-all ease-in-out duration-150">Add Note</a>
+            Hello <%=user.fullname%> ,
+                      </h1>
+        <div class="md:w-1/6 text-center block sm:inline-block">
+            <a href="#"
+                class=" border-2 border-cyan-600 p-3 px-5 text-md lg:text-lg rounded-full bg-cyan-500 text-white hover:bg-cyan-600 transition-all ease-in-out duration-150">Add
+                Note</a>
 
-    </div>
+        </div>
 
     </section>
 
-    <section class="land-sec2 p-4 h-screen">
-        <h1 class="lg:text-3xl text-2xl underline underline-offset-4 px-4">
+    <section class="land-sec2 p-4 h-screen bg-yellow-400">
+        <h1 class="lg:text-3xl text-2xl underline underline-offset-4 px-4 ">
             Saved Notes
         </h1>
-        <div class="border-0 grid md:grid-cols-2 p-2 py-4 grid-cols-1">
-            <div class="bg-yellow-500 text-white border-2 border-black rounded-lg text-xl px-4 py-3 m-1">
-                hii
+        <div class="border-0 grid lg:grid-cols-4 md:grid-cols-2 p-2 py-4 grid-cols-1">
+            <div class="bg-white rounded-xl">
+                <div
+                    class="bg-white text-black border-2 rounded-lg text-xl px-4 py-3 m-1 hover:bg-black hover:bg-opacity-20 ">
+                    <a href="#" class="w-full">hii</a>
+                </div>
             </div>
-            <div class="bg-yellow-500 text-white border-2 border-black rounded-lg text-xl px-4 py-3 m-1">
-                hii
-            </div>
-            <div class="bg-yellow-500 text-white border-2 border-black rounded-lg text-xl px-4 py-3 m-1">
-                hii
-            </div>
-            <div class="bg-yellow-500 text-white border-2 border-black rounded-lg text-xl px-4 py-3 m-1">
-                hii
-            </div>
-            
+
+
         </div>
     </section>
 
@@ -68,13 +71,13 @@
             <div class="footer-links-container">
                 <ul class="footer-links">
                     <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Use</a></li>
-            </ul>
-          </div>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
         </div>
         <ul class="social-links">
             <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
@@ -86,4 +89,5 @@
         <!-- <p>~Made By Dip</p> -->
     </footer>
 </body>
+
 </html>
