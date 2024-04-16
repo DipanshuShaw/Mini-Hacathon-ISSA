@@ -14,6 +14,7 @@ router.get('/landing', isLoggedIn, async function(req, res) {
   const user = await userModel.findOne({
     username: req.session.passport.user,
   })
+  .populate('posts')
   console.log(user);
   res.render('landing', {user});
 });
@@ -30,13 +31,16 @@ router.get('/add',isLoggedIn, async function(req, res) {
   res.render('add');
 });
 
-router.get('/add',isLoggedIn, async function(req, res) {
+router.post('/createpost',isLoggedIn, async function(req, res) {
   const user = await userModel.findOne({username: req.session.passport.user})
   const post = await postModel.create({
     user: user._id,
     title: req.body.title,
     description: req.body.description,
   })
+  user.posts.push(post._id);
+  await user.save();
+  res.redirect("/landing")
 });
 
 
