@@ -1,9 +1,11 @@
 const mongoose = require("mongoose")
 const plm = require("passport-local-mongoose")
+const { stringify } = require("postcss")
 
 mongoose.connect("mongodb://127.0.0.1:27017/MemoProps")
 
 const userSchema = mongoose.Schema({
+  fullname: String,
   username: {
     type: String,
     unique: true,

@@ -9,8 +9,12 @@ passport.use(new localStrategy(userModel.authenticate()))
 /* GET home page. */
 
 
-router.get('/landing', function(req, res) {
-  res.render('landing');
+router.get('/landing', isLoggedIn, async function(req, res) {
+  const user = await userModel.findOne({
+    username: req.session.passport.user,
+  })
+  console.log(user);
+  res.render('landing', {user});
 });
 
 
@@ -23,26 +27,27 @@ router.get('/register', function(req, res) {
   res.render('register');
 });
 
-router.get('/homepage', isLoggedIn, function(req, res) {
+router.get('/homepage', function(req, res) {
   res.render('index');
 });
 
 
 router.post("/register", function(req, res){
   var userdata = new userModel({
+    fullname: req.body.fullname,
     username: req.body.username,
     email: req.body.email
   });
   userModel.register(userdata, req.body.password)
   .then(function (registereduser){
     passport.authenticate("local")(req,res,function(){
-      res.redirect("/homepage")
+      res.redirect("/landing")
     })
   })
 })
 
 router.post("/login", passport.authenticate("local",{
-  successRedirect: '/homepage',
+  successRedirect: '/landing',
   failureRedirect: "/login",
   failureFlash: true,
 }), function(req,res){ })
